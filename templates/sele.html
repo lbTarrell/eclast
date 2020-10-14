@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home2.css') }}">
+        </head>
+   <body>
+    <h1>搜尋結果</h1>
+    <form action="/sele" method="POST">
+
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+        <label>Sele:</label>
+        <select id="z" name="z">
+            <option value="61598104">61598104</option>
+            <option value="111">111</option>
+          </select>
+     
+        <input type="submit" value="搜尋">
+    
+      </div>
+    </form>
+       <h1> {{ prediction }}</h1>
+     
+       <form action="/" method="POST">
+       <input type="submit" value="Return"></form>
+   </body>
+</html>

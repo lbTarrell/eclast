@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/homez4.css') }}">
+        </head>
+   <body>
+    <h1>裝修公司成交</h1>
+    
+    <form action="/result" method="POST">
+
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+          <select id="z" name="z">
+            <option value=天一>天一裝修設計有限公司</option>
+            <option value=榮本>榮本工程有限公司</option>
+            <option value=3 Design>3 Design Interior Company Limited</option>
+            <option value=One>A-One Design Limited</option>
+            <option value=IN Interior>IN Interior Design 室內設計公司</option>
+            <option value=冠一>冠一建築工程有限公司</option>
+            <option value=Villa>駿達設計工程 Villa Design</option>
+            <option value=J&B>J&B Workshop 室內設計工作室</option>
+            <option value=設計豐>設計豐工程公司 BestView</option>
+            <option value=Pi>Pi-Concept Design Company Ltd</option>
+            <option value=深德>深德設計工程公司</option>
+            <option value=In>Interium Design & Contracting Ltd</option>
+            <option value=微工>微工作室</option>
+            <option value=3 Design>3 Design Interiors</option>
+            <option value=自由>自由鳥裝修設計公司</option>
+            <option value=萬勝>萬勝裝修工程公司</option>
+            <option value=Anki>Anki Law Interior Design</option>
+            <option value=港信>港信裝修工程有限公司</option>
+            <option value=雅美>雅美工程有限公司</option>
+            <option value=鴻藝>鴻藝室內裝飾</option>
+            <option value=森工程>森工程有限公司</option>
+            <option value=FN>FNW</option>
+            <option value=YBJ>YBJ Design</option>
+            <option value=好家伙>好家伙設計工程公司</option>
+            <option value=OK>OK Decoration Design Ltd.</option>
+            <option value=亞洲第一>亞洲第一空間</option>
+            <option value=R&A>R&A Concept Ltd.</option>
+            <option value=Wilso>Wilso Workshop Company</option>
+            <option value=築圖>築圖室內工作室</option>
+            <option value=My Home>My Home Interior Design 自主空間</option>
+            <option value=Civvy>CIVVY Innovation Design</option>
+            <option value=藝美>藝美裝修工程公司</option>
+            <option value=MY HOME>MY HOME</option>
+            <option value=Moood>Mood & Home Interior Design</option>
+            <option value=Bonoto>Bonoto Design</option>
+            <option value=灝天>灝天玻璃工程</option>
+            <option value=美居>美居設計裝修公司</option>
+            <option value=家諾>家諾工程有限公司</option>
+            <option value=酷室>酷室工程有限公司</option>
+            <option value=永藝>永藝室內設計工程有限公司</option>
+            <option value=得利>得利家居維修及裝修公司</option>
+            <option value=永興>永興盛工程</option>
+            <option value=恒安>恒安工程</option>
+            <option value=新威>新威工程裝飾設計</option>
+            <option value=住靚D>住靚D家居設計</option>
+            <option value=名磚>名磚石藝</option>
+            <option value=C.MOS>C.MOS</option>
+            <option value=Topper>Topper</option>
+            <option value=昊峯>昊峯(香港)工程有限公司</option>
+            <option value=F cube>F cube interior design limited </option>
+            <option value=36>36 Interior Design</option>
+            <option value=聯盈>聯盈裝修及工程有限公司</option>
+            <option value=伍工>伍工作室有限公司</option>
+            <option value=TC>TC Design</option>
+            <option value=景雅>景雅裝飾工程有限公司</option>
+            <option value=創藝>創藝工程</option>
+            <option value=環球>環球設計工程</option>
+            <option value=東興>東興設計裝修公司</option>
+            <option value=鴻記>鴻記裝飾工程公司</option>
+            <option value=昊峯>昊峯(香港)工程有限公司</option>
+            <option value=明豐>明豐裝飾傢俬設計公司</option>
+            <option value=雲素>雲素科園(香港)工程有限公司</option>
+            <option value=Angle>Angle Design Ltd</option>
+            <option value=FMY>FMY Home Design Ltd</option>
+            <option value=Neo>Neo Space Planning Design Company Limited</option>
+            <option value=Es>EsGroup Interior Design Co. Ltd</option>
+            <option value=百鑫>百鑫設計裝修裝飾有限公司</option>
+            <option value=5 >5 DIMENSIONS</option>
+            <option value=Peace>Peace Design</option>
+            <option value=創意>創意工作室</option>
+            <option value=天下>天下室內設計有限公司</option>
+            <option value=比撒>比撒列工程 </option>
+            <option value=依達>依達貿易有限公司</option>
+            <option value=CS>CS Decoration Design </option>
+            <option value=CAN>CAN DO 致楹傢俬裝飾設計公司</option>
+            <option value=The one>The One Decoration Design Company </option>
+            <option value=Excellent>Excellent Design & Contracting Ltd (卓昇)</option>
+            <option value=咏樂>咏樂建築工程</option>
+            <option value=MR>MR Workshop</option>
+            <option value=家豪>家豪設計工程</option>
+            <option value=緻誠>緻誠工程管理</option>
+            <option value=天晴>天晴工程</option>
+            <option value=耀榮>耀榮室內工程</option>
+            <option value=Aloha>Aloha Decor</option>
+              
+          </select>
+
+          <select id="za" name="za">
+            <option value="進行中">進行中</option>
+            <option value="已完成">已完成</option>
+            <option value="全部">全部</option>
+            </select>
+        <input type="submit" value="搜尋">
+      </div>
+    </div>
+  </form>
+    <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+        <h2></h2>
+    </div>
+    <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+    <img src="./static/echouse-icon7.png" style="width:70px;height:70px;">
+    </div>
+    <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+      <img src="./static/echouse-icon10.png" style="width:70px;height:70px;">
+      </div>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+          <h3>{{ name }}</h3>
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            
+        <h3>{{ donenumber }}</h3>
+    </div>
+        <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+          <h3>{{ address }}</h3>
+          </div>
+          <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            
+            <h3>{{ contact }}</h3>
+        </div>
+       
+ 
+                      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                    
+                          <h3>{{ type1 }}</h3>
+                      </div>
+                        <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                          <h3>{{ feature }}</h3>
+                          </div>
+
+                                          
+       {% for table in tables %}
+            {{ table|safe }}
+       {% endfor %}
+       <form action="/" method="POST">
+       <input type="submit" value="返回"></form>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/homez4.css') }}">
+        </head>
+   <body>
+    <h1>搜尋結果</h1>
+       <h1> {{ prediction }}</h1>
+       {% for table in tables %}
+
+       <br>
+       {{ decor }}
+       <br>
+       {{ ren }}
+       <br>
+       {{ donenumber }}
+       <br>
+       {{ donenumber1 }}
+       <br>   
+            {{ table|safe }}
+       {% endfor %}
+       <form action="/" method="POST">
+       <input type="submit" value="Return"></form>
+   </body>
+</html>

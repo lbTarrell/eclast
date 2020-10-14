@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>My Flask Web App</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homez4.css') }}">
+</head>
+<body>
+
+<img src="./static/1.jpg" style="width:200px;height:70px;">
+<br>
+<br>
+<div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  <h2> </h2>
+  </div>
+<div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+<img src="./static/echouse-icon7.png" style="width:70px;height:70px;">
+</div>
+<div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+  <img src="./static/echouse-icon3.png" style="width:70px;height:70px;">
+  </div>
+<div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+<h2>裝修公司成交</h2>
+</div>
+<div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+  <h2>成交地點</h2>
+  
+  </div>
+<form action="/result" method="POST">
+
+  <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    <!-- <label>裝修公司:</label> -->
+    <select id="z" name="z">
+      <option value=天一>天一裝修設計有限公司</option>
+      <option value=榮本>榮本工程有限公司</option>
+      <option value=3 Design>3 Design Interior Company Limited</option>
+      <option value=One>A-One Design Limited</option>
+      <option value=IN>IN Interior Design 室內設計公司</option>
+      <option value=冠一>冠一建築工程有限公司</option>
+      <option value=Villa>駿達設計工程 Villa Design</option>
+      <option value=J&B>J&B Workshop 室內設計工作室</option>
+      <option value=設計豐>設計豐工程公司 BestView</option>
+      <option value=Pi>Pi-Concept Design Company Ltd</option>
+      <option value=深德>深德設計工程公司</option>
+      <option value=Interium>Interium Design & Contracting Ltd</option>
+      <option value=微工>微工作室</option>
+      <option value=3 Design>3 Design Interiors</option>
+      <option value=自由>自由鳥裝修設計公司</option>
+      <option value=萬勝>萬勝裝修工程公司</option>
+      <option value=Anki>Anki Law Interior Design</option>
+      <option value=港信>港信裝修工程有限公司</option>
+      <option value=雅美>雅美工程有限公司</option>
+      <option value=鴻藝>鴻藝室內裝飾</option>
+      <option value=森工程>森工程有限公司</option>
+      <option value=FN>FNW</option>
+      <option value=YBJ>YBJ Design</option>
+      <option value=好家伙>好家伙設計工程公司</option>
+      <option value=OK>OK Decoration Design Ltd.</option>
+      <option value=亞洲第一>亞洲第一空間</option>
+      <option value=R&A>R&A Concept Ltd.</option>
+      <option value=Wilso>Wilso Workshop Company</option>
+      <option value=築圖>築圖室內工作室</option>
+      <option value=My Home>My Home Interior Design 自主空間</option>
+      <option value=Civvy>CIVVY Innovation Design</option>
+      <option value=藝美>藝美裝修工程公司</option>
+      <option value=MY HOME>MY HOME</option>
+      <option value=Moood>Mood & Home Interior Design</option>
+      <option value=Bonoto>Bonoto Design</option>
+      <option value=灝天>灝天玻璃工程</option>
+      <option value=美居>美居設計裝修公司</option>
+      <option value=家諾>家諾工程有限公司</option>
+      <option value=酷室>酷室工程有限公司</option>
+      <option value=永藝>永藝室內設計工程有限公司</option>
+      <option value=得利>得利家居維修及裝修公司</option>
+      <option value=永興>永興盛工程</option>
+      <option value=恒安>恒安工程</option>
+      <option value=新威>新威工程裝飾設計</option>
+      <option value=住靚D>住靚D家居設計</option>
+      <option value=名磚>名磚石藝</option>
+      <option value=C.MOS>C.MOS</option>
+      <option value=Topper>Topper</option>
+      <option value=昊峯>昊峯(香港)工程有限公司</option>
+      <option value=F cube>F cube interior design limited </option>
+      <option value=36>36 Interior Design</option>
+      <option value=聯盈>聯盈裝修及工程有限公司</option>
+      <option value=伍工>伍工作室有限公司</option>
+      <option value=TC>TC Design</option>
+      <option value=景雅>景雅裝飾工程有限公司</option>
+      <option value=創藝>創藝工程</option>
+      <option value=環球>環球設計工程</option>
+      <option value=東興>東興設計裝修公司</option>
+      <option value=鴻記>鴻記裝飾工程公司</option>
+      <option value=昊峯>昊峯(香港)工程有限公司</option>
+      <option value=明豐>明豐裝飾傢俬設計公司</option>
+      <option value=雲素>雲素科園(香港)工程有限公司</option>
+      <option value=An>Angle Design Ltd</option>
+      <option value=FM>FMY Home Design Ltd</option>
+      <option value=Neo>Neo Space Planning Design Company Limited</option>
+      <option value=Es>EsGroup Interior Design Co. Ltd</option>
+      <option value=百鑫>百鑫設計裝修裝飾有限公司</option>
+      <option value=5 >5 DIMENSIONS</option>
+      <option value=Peace>Peace Design</option>
+      <option value=創意>創意工作室</option>
+      <option value=天下>天下室內設計有限公司</option>
+      <option value=比撒>比撒列工程 </option>
+      <option value=依達>依達貿易有限公司</option>
+      <option value=CS>CS Decoration Design </option>
+      <option value=CAN>CAN DO 致楹傢俬裝飾設計公司</option>
+      <option value=The one>The One Decoration Design Company </option>
+      <option value=Excellent>Excellent Design & Contracting Ltd (卓昇)</option>
+      <option value=咏樂>咏樂建築工程</option>
+      <option value=MR>MR Workshop</option>
+      <option value=家豪>家豪設計工程</option>
+      <option value=緻誠>緻誠工程管理</option>
+      <option value=天晴>天晴工程</option>
+      <option value=耀榮>耀榮室內工程</option>
+      <option value=Aloha>Aloha Decor</option>
+        
+      </select>
+
+      <!-- <label>類別:</label> -->
+      <select id="za" name="za">
+        <option value="進行中">進行中</option>
+          <option value="已完成">已完成</option>
+          <option value="全部">全部</option>
+          
+        </select>
+        
+    <input type="submit" value="搜尋">
+  </div>
+
+
+</form>
+<br>
+
+<form action="/result1" method="POST">
+
+  <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+    <!-- <label>地點:</label> -->
+    <select id="z" name="z">
+      <option value=堅尼地城>--港島--</option>
+      <option value=堅尼地城>堅尼地城</option>
+ 
+      <option value=西營盤>西營盤</option>
+      <option value=上環>上環</option>
+      <option value=中環>中環</option>
+      <option value=金鐘>金鐘</option>
+
+      <option value=灣仔>灣仔</option>
+      <option value=銅鑼灣>銅鑼灣</option>
+      <option value=跑馬地>跑馬地</option>
+      <option value=天后>天后</option>
+
+      <option value=北角>北角</option>
+      <option value=鰂魚涌>鰂魚涌</option>
+      <option value=西灣河>西灣河</option>
+      <option value=筲箕灣>筲箕灣</option>
+      <option value=柴灣>柴灣</option>
+
+      <option value=香港仔>香港仔</option>
+      <option value=鴨脷洲>鴨脷洲</option>
+      <option value=黃竹坑>黃竹坑</option>
+      <option value=尖沙咀>--九龍--</option>
+      <option value=尖沙咀>尖沙咀</option>
+      <option value=油麻地>油麻地</option>
+      <option value=旺角>旺角</option>
+      <option value=大角咀>大角咀</option>
+      <option value=美孚>美孚</option>
+      <option value=荔枝角>荔枝角</option>
+      <option value=長沙灣>長沙灣</option>
+      <option value=深水埗>深水埗</option>
+      <option value=石硤尾>石硤尾</option>
+      <option value=紅磡>紅磡</option>
+      <option value=土瓜灣>土瓜灣</option>
+      <option value=啟德>啟德</option>
+      <option value=何文田>何文田</option>
+      <option value=九龍塘>九龍塘</option>
+      <option value=黃大仙>黃大仙</option>
+      <option value=樂富>樂富</option>
+      <option value=鑽石山>鑽石山</option>
+      <option value=九龍灣>九龍灣</option>
+      <option value=牛頭角>牛頭角</option>
+      <option value=佐敦>佐敦</option>
+      <option value=觀塘>觀塘</option>
+      <option value=藍田>藍田</option>
+      <option value=油塘>油塘</option>
+    <option value=彩虹>彩虹</option>
+      <option value=葵涌>--新界--</option>
+      <option value=葵涌>葵涌</option>
+      <option value=青衣>青衣</option>
+      <option value=荃灣>荃灣</option>
+      <option value=深井>深井</option>
+
+      <option value=欣澳>欣澳</option>
+      <option value=屯門>屯門</option>
+      <option value=天水圍>天水圍</option>
+      <option value=元朗>元朗</option>
+      <option value=粉嶺>粉嶺</option>
+
+      <option value=上水>上水</option>
+      <option value=大埔>大埔</option>
+
+
+      <option value=大圍>大圍</option>
+      <option value=沙田>沙田</option>
+      <option value=火炭>火炭</option>
+
+      <option value=烏溪沙>烏溪沙</option>
+      <option value=馬鞍山>馬鞍山</option>
+      <option value=清水灣>清水灣</option>
+      <option value=西貢>西貢</option>
+    
+      <option value=將軍澳>將軍澳</option>
+      <option value=調景嶺>調景嶺</option>
+
+      </select>
+  
+    <input type="submit" value="搜尋">
+
+  </div>
+  <br>
+</form>
+<div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+  <h2> </h2>
+  </div>
+<form action="/result9" method="POST">
+  <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+  <!-- <label>詳細地點:</label> -->
+  <input type="text" name="parch" placeholder="詳細地點">
+
+  <input type="submit" value="搜尋">
+</div>
+</form>
+<br>
+<div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center"><h2> </h2></div>
+<div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+  <img src="./static/echouse-icon1.png" style="width:70px;height:70px;">
+  </div>
+  <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+    <img src="./static/echouse-icon2.png" style="width:70px;height:70px;">
+    </div>
+<br>
+<div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+<h2>同事中單</h2>
+</div>
+<div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+  <h2>數據統計</h2>
+</div>
+
+<form action="/result2" method="POST">
+
+  <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+    <!-- <label>同事:</label> -->
+    <select id="z" name="z">
+        <option value="Kit">Kit</option>
+        <option value="King">King</option>
+        <option value="Wil">Wilson</option>
+        <option value="Yin">Yin</option>
+        <option value="Fiona">Fiona</option>
+        <option value="Ec">EC</option>
+      </select>
+      <select id="za" name="za">
+        <option value="進行中">進行中</option>
+          <option value="已完成">已完成</option>
+          <option value="全部">全部</option>
+      </select>
+ 
+    <input type="submit" value="搜尋">
+
+  </div>
+</form>
+<!-- <h1>Whatsapp Send Message</h1>
+
+
+<form action="/sele" method="POST">
+
+  <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+    <label>登入帳號:</label>
+    <select id="sele" name="z">
+      <option value="61598104">Test</option>
+      <option value="61598104">No Test</option>
+    </select>
+ 
+    <input type="submit" value="登入">
+
+  </div>
+</form>
+<br>
+<form action="/sele" method="POST">
+
+  <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+    <label>電話號碼:</label>
+    <input type="text" name="z">
+ 
+    <input type="submit" value="發出">
+
+  </div>
+</form> -->
+
+
+<br>
+<form action="/result30" method="POST">
+
+  <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+    <!-- <label>日期:</label> -->
+    <select id="z" name="z">
+        <option value="2020">2020年</option>
+        <option value="2019">2019年</option>
+        <option value="2018">2018年</option>
+      </select>
+      <!-- <label>月份:</label> -->
+    <select id="za" name="za">
+      <option value="12">12月</option>
+      <option value="11">11月</option>
+      <option value="10">10月</option>
+        <option value="9">9月</option>
+        <option value="8">8月</option>
+        <option value="7">7月</option>
+        <option value="6">6月</option>
+        <option value="5">5月</option>
+        <option value="4">4月</option>
+        <option value="3">3月</option>
+        <option value="2">2月</option>
+        <option value="1">1月</option>
+      </select>
+    <input type="submit" value="統計">
+
+  </div>
+</form>
+<div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  <h2> </h2>
+  </div>
+<div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+  <img src="./static/echouse-icon10.png" style="width:70px;height:70px;">
+  </div>
+  <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+    <img src="./static/echouse-icon8.png" style="width:70px;height:70px;">
+    </div>
+    <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+      <h2>快速Whatsapp群發</h2>
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+      
+        <h2>爆獲計算</h2>
+        
+        </div>
+
+        <form action="/sele" method="POST">
+
+          <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        
+            <label>登入WhatsApp:</label>
+            <select id="selelogin" name="z">
+              <option value="61598104">測試</option>
+              <option value="61598104">Roman</option>
+            </select>
+         
+            <input type="submit" value="登入">
+        
+          </div>
+        </form>
+        <form action="/sele" method="POST">
+
+          <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        
+            <label>進行中工程:</label>
+            <select id="sele" name="z">
+              <option value="0">0單</option>
+              <option value="1">1單</option>
+              <option value="2">2單</option>
+              <option value="3">3單</option>
+              <option value="4">4單</option>
+              <option value="5">5單</option>
+              <option value="6">6單</option>
+              <option value="7">7單</option>
+            </select>
+         
+       
+        
+          </div>
+        </form>
+        <form action="/result9" method="POST">
+          <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+   
+          <input type="text" name="parch" placeholder="電話名單">
+          <input type="text" name="parch" placeholder="訊息">
+          <input type="submit" value="搜尋">
+        </div>
+        </form>
+        <form action="/result9" method="POST">
+          <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+            <label>過往曾被投訴:</label>
+            <select id="sele" name="z">
+              <option value="0">0次</option>
+              <option value="1">1次</option>
+              <option value="2">2次</option>
+              <option value="3">3次</option>
+              <option value="4">4次</option>
+              <option value="5">5次</option>
+              <option value="6">6次</option>
+              <option value="7">7次</option>
+            </select>
+        
+          <input type="submit" value="預測">
+        </div>
+        </form>
+<div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+<h2> </h2>
+</div>
+  <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+    <form action="/" method="POST">
+    <input type="submit" value="登出">
+
+
+</form>
+</div>
+<div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+<h4>最後更新時間：2020/10/30 16:41:34</h4>
+</div>
+</body>
+</html>

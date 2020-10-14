@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/homez4.css') }}">
+        </head>
+   <body>
+    <h1>同事中單</h1>
+    <form action="/result2" method="POST">
+
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+      
+         
+          <select id="z" name="z">
+              <option value="Kit">Kit</option>
+              <option value="King">King</option>
+              <option value="Wil">Wilson</option>
+              <option value="Yin">Yin</option>
+              <option value="Fiona">Fiona</option>
+              <option value="Ec">EC</option>
+            </select>
+            <select id="za" name="za">
+              <option value="進行中">進行中</option>
+              <option value="已完成">已完成</option>
+              <option value="全部">全部</option>
+            </select>
+    
+          <input type="submit" value="搜尋">
+      
+        </div>
+      </form>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+        <img src="./static/echouse-icon1.png" style="width:70px;height:70px;">
+        </div>
+        <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        
+          <img src="./static/echouse-icon10.png" style="width:70px;height:70px;">
+          </div>
+          <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        
+            <h3>{{ nnnna }}</h3>
+        </div>
+        <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+              
+          <h3>{{ donenumber  }}</h3>
+      </div>
+          <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        
+              <h3>{{ totl }}</h3>
+          </div>
+          <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                
+            <h3>{{ summm }}</h3>
+        </div>
+       
+       <br>
+
+       {% for table in tables %}
+            {{ table|safe }}
+       {% endfor %}
+       <form action="/" method="POST">
+        <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+          <h4># 數據自2019年1月-2020年9月</h4>
+          </div>
+       <input type="submit" value="返回"></form>
+   </body>
+</html>

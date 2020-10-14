@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/homez4.css') }}">
+        </head>
+   <body>
+    <h1>成交地點</h1>
+
+    <form action="/result1" method="POST">
+
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+      
+          <label>地點:</label>
+          <select id="z" name="z">
+
+              <option value=堅尼地城>--港島--</option>
+              <option value=堅尼地城>堅尼地城</option>
+         
+              <option value=西營盤>西營盤</option>
+              <option value=上環>上環</option>
+              <option value=中環>中環</option>
+              <option value=金鐘>金鐘</option>
+        
+              <option value=灣仔>灣仔</option>
+              <option value=銅鑼灣>銅鑼灣</option>
+              <option value=跑馬地>跑馬地</option>
+              <option value=天后>天后</option>
+        
+              <option value=北角>北角</option>
+              <option value=鰂魚涌>鰂魚涌</option>
+              <option value=西灣河>西灣河</option>
+              <option value=筲箕灣>筲箕灣</option>
+              <option value=柴灣>柴灣</option>
+        
+              <option value=香港仔>香港仔</option>
+              <option value=鴨脷洲>鴨脷洲</option>
+              <option value=黃竹坑>黃竹坑</option>
+              <option value=尖沙咀>--九龍--</option>
+              <option value=尖沙咀>尖沙咀</option>
+              <option value=油麻地>油麻地</option>
+              <option value=旺角>旺角</option>
+              <option value=大角咀>大角咀</option>
+              <option value=美孚>美孚</option>
+              <option value=荔枝角>荔枝角</option>
+              <option value=長沙灣>長沙灣</option>
+              <option value=深水埗>深水埗</option>
+              <option value=石硤尾>石硤尾</option>
+              <option value=紅磡>紅磡</option>
+              <option value=土瓜灣>土瓜灣</option>
+              <option value=啟德>啟德</option>
+              <option value=何文田>何文田</option>
+              <option value=九龍塘>九龍塘</option>
+              <option value=黃大仙>黃大仙</option>
+              <option value=樂富>樂富</option>
+              <option value=鑽石山>鑽石山</option>
+              <option value=九龍灣>九龍灣</option>
+              <option value=牛頭角>牛頭角</option>
+              <option value=佐敦>佐敦</option>
+              <option value=觀塘>觀塘</option>
+              <option value=藍田>藍田</option>
+              <option value=油塘>油塘</option>
+            <option value=彩虹>彩虹</option>
+              <option value=葵涌>--新界--</option>
+              <option value=葵涌>葵涌</option>
+              <option value=青衣>青衣</option>
+              <option value=荃灣>荃灣</option>
+              <option value=深井>深井</option>
+        
+              <option value=欣澳>欣澳</option>
+              <option value=屯門>屯門</option>
+              <option value=天水圍>天水圍</option>
+              <option value=元朗>元朗</option>
+              <option value=粉嶺>粉嶺</option>
+        
+              <option value=上水>上水</option>
+              <option value=大埔>大埔</option>
+        
+        
+              <option value=大圍>大圍</option>
+              <option value=沙田>沙田</option>
+              <option value=火炭>火炭</option>
+        
+              <option value=烏溪沙>烏溪沙</option>
+              <option value=馬鞍山>馬鞍山</option>
+              <option value=清水灣>清水灣</option>
+              <option value=西貢>西貢</option>
+            
+              <option value=將軍澳>將軍澳</option>
+              <option value=調景嶺>調景嶺</option>
+        
+   
+            </select>
+          <input type="submit" value="搜尋">
+      
+        </div>
+        <br>
+      </form>
+      <form action="/result9" method="POST">
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+      
+        <!-- <label>詳細地點:</label> -->
+        <input type="text" name="parch" placeholder="詳細地點">
+      
+        <input type="submit" value="搜尋">
+      </div>
+      </form>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+        <img src="./static/echouse-icon3.png" style="width:70px;height:70px;">
+        </div>
+        <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        
+          <img src="./static/echouse-icon10.png" style="width:70px;height:70px;">
+          </div>
+          <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        
+              <h3>{{ nam1 }}</h3>
+          </div>
+          <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                
+            <h3>{{ donenumber }}</h3>
+        </div>
+            <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+              <h3>{{ decor }}</h3>
+              </div>
+              <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                
+                <h3>{{ ren }}</h3>
+            </div>
+
+       {% for table in tables %}
+            {{ table|safe }}
+       {% endfor %}
+       <form action="/" method="POST">
+       <input type="submit" value="Return"></form>
+   </body>
+</html>

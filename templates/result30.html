@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/homez4.css') }}">
+        </head>
+   <body>
+
+    <h1>EcHouse數據分析</h1>
+    
+    <form action="/result30" method="POST">
+
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+    
+
+        <select id="z" name="z">
+            <option value="2020">2020年</option>
+            <option value="2019">2019年</option>
+            <option value="2018">2018年</option>
+          </select>
+
+        <select id="za" name="za">
+          <option value="12">12月</option>
+      <option value="11">11月</option>
+      <option value="10">10月</option>
+        <option value="9" >9月</option>
+        <option value="8">8月</option>
+        <option value="7">7月</option>
+        <option value="6">6月</option>
+        <option value="5">5月</option>
+        <option value="4">4月</option>
+        <option value="3">3月</option>
+        <option value="2">2月</option>
+        <option value="1">1月</option>
+          </select>
+        <input type="submit" value="統計">
+    
+      </div>
+    </form>
+        <br>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+          <h2>{{monthname}}</h2>
+ 
+        <h2>派單數</h2>
+      </div>
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for table in tables %}
+        {{ tim }}
+        {{ table|safe }}
+      </div>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>裝修類別分佈</h2>
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>來源分佈</h2>
+      </div>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        <img src= {{ url4 }} alt="Chart" height="300" width="320">
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        <img src= {{ url5 }} alt="Chart" height="300" width="440">
+      </div>
+  
+        <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+          <h2>{{monthname}}</h2>
+          <h2>收樓｜未收樓</h2>
+        </div>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for ordernum in ordernum %}
+        {{ ordernum|safe }}
+      </div>
+  
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+          <h2>{{monthname}}</h2>
+          <h2>派單預算</h2>
+        </div>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for table22 in tables22 %}
+        {{ table22|safe }}
+      </div>
+
+
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+          <h2>{{monthname}}</h2>
+          <h2>派單預算｜來源</h2>
+        </div>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for tablesorucecombi in tablesorucecomb %}
+        {{ tablesorucecombi|safe }}
+      </div>
+     
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>派單預算分佈</h2>
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>同事派單量</h2>
+      </div>
+      
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        <img src= {{ url1 }} alt="Chart" height="300" width="385">
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        <img src= {{ url2 }} alt="Chart" height="300" width="385">
+      </div>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{yearname}}</h2>
+        <h2>派單預算分佈</h2>
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{yearname}}</h2>
+        <h2>來源分佈</h2>
+      </div>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        <img src= {{ url7 }} alt="Chart" height="300" width="385">
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        <img src= {{ url6 }} alt="Chart" height="300" width="385">
+      </div>
+      <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{yearname}}</h2>
+        <h2>同事派單分佈</h2>
+      </div>
+      <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        <img src= {{ url8 }} alt="Chart" height="300" width="385">
+      </div>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>查詢量合格</h2>
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>獎單</h2>
+      </div>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for seventypercent1i in seventypercent1 %}
+        {{ seventypercent1i|safe }}
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center" >
+
+        {% for table200 in tablesreward %}
+        {{ table200|safe }}
+      </div>
+   
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>地區分佈</h2>
+      </div>
+      <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>配對公司類別</h2>
+      </div>
+      <div class="floatLeft" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for table33 in tables33 %}
+        {{ table33|safe }}
+        </div>
+  
+        <div class="floatRight" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+          {% for table011 in tablestype1 %}
+          {{ table011|safe }}
+        </div>
+        <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+          <h2>{{monthname}}</h2>
+          <h2>裝修類型</h2>
+        </div>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+  
+        {% for table01 in tablestype %}
+        {{ table01|safe }}
+      </div>
+      <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>裝修申請分佈</h2>
+      </div>
+ 
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        <img src= {{ url3 }} alt="Chart" height="600" width="780">
+      </div>
+
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>Kit VIP</h2>
+      </div>
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for comvipcompkit in comvipcompkit %}
+        {{ comvipcompkit|safe }}
+      </div>
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>Wil VIP</h2>
+      </div>
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for comvipcompwil in comvipcompwil %}
+        {{ comvipcompwil|safe }}
+      </div>
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>King VIP</h2>
+      </div>
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for comvipcompking in comvipcompking %}
+        {{ comvipcompking|safe }}
+      </div>
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+        <h2>{{monthname}}</h2>
+        <h2>Yin VIP</h2>
+      </div>
+      <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+        {% for comvipcompyin in comvipcompyin %}
+        {{ comvipcompyin|safe }}
+      </div>
+    
+      
+        {% endfor %}
+        {% endfor %}
+ 
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
+     
+        {% endfor %}
+      
+
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
+       {% endfor %}
+       {% endfor %}
+       <form action="/" method="POST">
+        <div class="center" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+          <h3> </h3>
+          </div>
+       <input type="submit" value="返回"></form>
+   </body>
+</html>

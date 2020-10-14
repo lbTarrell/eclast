@@ -1,0 +1,25 @@
+
+<img src="/static/1.jpg" style="width:200px;height:70px;">
+<br>
+<br>
+<br>
+
+<h1>EcHouse 內部員工系統</h1>
+<br>
+<br>
+
+<br>
+<br>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home2.css') }}">
+<div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+
+<form action="/login" method="POST">
+    <label>帳號:</label>
+  <input type="username" name="username" placeholder="Username">
+  <br>
+  <br>
+  <label>密碼:</label>
+<input type="password" name="password" placeholder="Password">
+<input type="submit" value="登入">
+</form>
+</div>
