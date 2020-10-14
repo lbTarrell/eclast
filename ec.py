@@ -26,6 +26,11 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd
+try:
+    import googleclouddebugger
+    googleclouddebugger.enable(breakpoint_enable_canary=True)
+except ImportError:
+    pass
 from flask import Flask, flash, redirect, render_template, request, session, abort
 app=Flask(__name__)
 
@@ -1324,5 +1329,5 @@ def home1():
 
 if __name__ == "__main__":
     app.debug = True
-    app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+    app.secret_key = os.urandom(12)
     app.run()
