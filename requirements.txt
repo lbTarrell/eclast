@@ -9,3 +9,4 @@ selenium==3.141.0
 google-api-python-client
 google-auth-oauthlib
 google-auth
+google-python-cloud-debugger
