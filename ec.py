@@ -26,11 +26,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd
-try:
-    import googleclouddebugger
-    googleclouddebugger.enable(breakpoint_enable_canary=True)
-except ImportError:
-    pass
+from flask import Response
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+
 from flask import Flask, flash, redirect, render_template, request, session, abort
 app=Flask(__name__)
 
