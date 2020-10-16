@@ -28,6 +28,7 @@ import pandas as pd
 from flask import Response
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
+import io
 
 from flask import Flask, flash, redirect, render_template, request, session, abort
 app=Flask(__name__)
